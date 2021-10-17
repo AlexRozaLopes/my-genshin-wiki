@@ -15,7 +15,7 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.genshinDadosService.getDadosPrincipais().subscribe(dados => this.dadosPrincipais.push(...dados.types))
-    console.log("oi")
+    console.log(this.dadosPrincipais)
   }
 
 }
