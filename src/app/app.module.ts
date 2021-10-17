@@ -18,9 +18,14 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CharactersInfoComponent } from './characters/characters-info/characters-info.component';
+import { CharactersDetailsComponent } from './characters/characters-details/characters-details.component';
+import { CharactersRouterComponent } from './characters/characters-router/characters-router.component';
 
 const appRoutes: Routes = [
-  {path:'characters', component:CharactersComponent},
+  {path:'characters', component:CharactersRouterComponent, children:[
+    {path:'', component:CharactersComponent},
+    {path:'details/:name', component:CharactersDetailsComponent}
+  ]},
   {path:'artifacts', component:ArtifactsComponent},
   {path:'consumables', component:ConsumablesComponent},
   {path:'domains', component:DomainsComponent},
@@ -36,7 +41,9 @@ const appRoutes: Routes = [
     AppComponent,
     NavBarComponent,
     CharactersComponent,
-    CharactersInfoComponent
+    CharactersInfoComponent,
+    CharactersDetailsComponent,
+    CharactersRouterComponent
   ],
   imports: [
     BrowserModule,

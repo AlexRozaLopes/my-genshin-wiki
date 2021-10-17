@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item" *ngFor="let item of dadosPrincipais">
-          <a class="nav-link" routerLink='/{{item}}' >{{item}}</a>
+          <a class="nav-link" routerLinkActive='active' routerLink='/{{item}}' >{{item}}</a>
         </li>
       </ul>
       <form class="d-flex">
