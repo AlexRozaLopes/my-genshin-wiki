@@ -1,3 +1,4 @@
+import { Champion } from './../../shared/champion';
 import { CharactersService } from './../../service/characters.service';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -9,14 +10,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CharactersInfoComponent implements OnInit {
 
   @Input() champ:string = ''
-  champion:any
+  champion:Array<Champion> = []
   imgChampion:any
 
   constructor(private charactersService:CharactersService) { }
 
 
   ngOnInit(): void {
-    this.charactersService.findCharacters(this.champ).subscribe(dados => this.champion = dados)
+    this.charactersService.findCharacters(this.champ).subscribe(dados => this.champion.push(dados))
+    console.log(this.champion)
     this.getImageFromService()
   }
 

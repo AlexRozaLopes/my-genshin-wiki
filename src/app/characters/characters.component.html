@@ -1,9 +1,9 @@
 
   <div class="row">
-    <div class="col-4">
-      <div class="card" style="width: 18rem; display: inline-block;" *ngFor="let item of characters">
+    <div class="col-sm-3" *ngFor="let item of characters">
+      <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">{{ item }}</h5>
+          <h2 class="card-title">{{ item }}</h2>
           <app-characters-info champ="{{ item }}"></app-characters-info>
         </div>
       </div>

@@ -1,4 +1,5 @@
 export interface Champion {
   name:string,
-  description:string,
+  description?:string,
+  nation: string
 }
