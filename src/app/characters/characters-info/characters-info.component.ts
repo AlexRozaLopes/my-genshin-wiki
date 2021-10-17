@@ -1,4 +1,3 @@
-import { Champion } from './../../shared/champion';
 import { CharactersService } from './../../service/characters.service';
 import { Component, Input, OnInit } from '@angular/core';
 

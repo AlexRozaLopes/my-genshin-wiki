@@ -1,3 +1,4 @@
+import { Champion } from './../shared/champion';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -15,7 +16,7 @@ export class CharactersService {
   }
 
   findCharacters(champ:string){
-    return this.httpClient.get(this.URL_BASE+'characters/'+champ);
+    return this.httpClient.get<Champion>(this.URL_BASE+'characters/'+champ);
   }
   findImgCharacters(champ:string){
     return this.httpClient.get(this.URL_BASE+'characters/'+champ+'/card', { responseType: 'blob' });

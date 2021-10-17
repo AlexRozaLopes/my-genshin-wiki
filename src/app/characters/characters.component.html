@@ -1,6 +1,12 @@
-<div class="card" style="width: 18rem;" *ngFor="let item of characters">
-  <div class="card-body">
-    <h5 class="card-title">{{item}}</h5>
-    <app-characters-info champ={{item}}></app-characters-info>
+
+  <div class="row">
+    <div class="col-4">
+      <div class="card" style="width: 18rem; display: inline-block;" *ngFor="let item of characters">
+        <div class="card-body">
+          <h5 class="card-title">{{ item }}</h5>
+          <app-characters-info champ="{{ item }}"></app-characters-info>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+
