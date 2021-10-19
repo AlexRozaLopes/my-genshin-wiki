@@ -1,3 +1,5 @@
+import { Constellation } from './constellation';
+import { PassiveTalents } from './passive-talents';
 import { SkillTalent } from "./skill-talent";
 
 export interface Champion {
@@ -11,5 +13,6 @@ export interface Champion {
   birthday: string;
   description?: string
   skillTalents:Array<SkillTalent>
-  passiveTalents:Array<any>
+  passiveTalents:Array<PassiveTalents>
+  constellations:Array<Constellation>
 }
