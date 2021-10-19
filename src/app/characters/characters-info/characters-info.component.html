@@ -1,3 +1,3 @@
 <img src={{imgChampion}} class="card-img-top" alt="...">
 <p class="card-text" *ngIf="champion[0].description != undefined">{{champion[0].description}}</p>
-<a [routerLink]="['details/', champion[0].name]" class="btn btn-primary">Details</a>
+<a *ngIf="showDetails" [routerLink]="['details/', champion[0].name]" class="btn btn-primary">Details</a>

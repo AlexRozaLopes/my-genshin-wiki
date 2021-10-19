@@ -9,6 +9,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CharactersInfoComponent implements OnInit {
 
+  @Input()
+  showDetails:boolean = true
   @Input() champ:string = ''
   champion:Array<Champion> = []
   imgChampion:any
