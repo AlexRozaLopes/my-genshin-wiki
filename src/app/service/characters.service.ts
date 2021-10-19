@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class CharactersService {
 
-  private URL_BASE = 'https://api.genshin.dev/'
+  private readonly URL_BASE = 'https://api.genshin.dev/'
 
   constructor(private httpClient:HttpClient) { }
 

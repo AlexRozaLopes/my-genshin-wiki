@@ -10,6 +10,7 @@ import { Champion } from 'src/app/shared/champion';
 })
 export class CharactersDetailsComponent implements OnInit {
 
+  panelOpenState = false;
   public person:Array<Champion> = []
 
   constructor(private router: ActivatedRoute, private charactersService:CharactersService ) { }
